@@ -10,9 +10,10 @@ import {
 type Props = {
   url: string;
   columns: string[];
+  preventControl?: boolean;
 };
 
-export const ProgramLoader = ({ url, columns }: Props) => {
+export const ProgramLoader = ({ url, columns, preventControl }: Props) => {
   const [selectedColumn, setSelectedColumn] = React.useState<number>(0);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -53,13 +54,14 @@ export const ProgramLoader = ({ url, columns }: Props) => {
                 control={<Radio />}
                 label={column}
                 value={index}
+                disabled={preventControl}
               />
             ))}
           </RadioGroup>
           <Button
             variant="contained"
             onClick={loadPrograms}
-            disabled={selectedColumn === undefined}
+            disabled={selectedColumn === undefined || preventControl}
             loading={isLoading}
           >
             企画一覧を読み込み
