@@ -68,7 +68,7 @@ const programs = (nodecg: ServerNodecgInstance) => {
   const programsRep = nodecg.Replicant('programs', {
     defaultValue: [],
   });
-  const currentProgram = nodecg.Replicant('current-program', {
+  nodecg.Replicant('current-program', {
     defaultValue: defaultProgram,
   });
 

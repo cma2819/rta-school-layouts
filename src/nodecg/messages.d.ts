@@ -15,4 +15,12 @@ export type MessageMap = {
       };
     };
   };
+  'est:start': unknown;
+  'est:pause': unknown;
+  'est:resume': unknown;
+  'est:finish': unknown;
+  'est:reset': unknown;
+  'est:plus': unknown;
+  'est:minus': unknown;
+  'est:over': unknown;
 };

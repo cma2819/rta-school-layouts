@@ -30,6 +30,44 @@
         "width": 4,
         "file": "control-program.html"
       }
+    ],
+    "graphics": [
+      {
+        "file": "general.html",
+        "width": "1920",
+        "height": "1080",
+        "singleInstance": false
+      },
+      {
+        "file": "generic-program.html",
+        "width": "1920",
+        "height": "1080",
+        "singleInstance": false
+      },
+      {
+        "file": "speedrun.html",
+        "width": "1920",
+        "height": "1080",
+        "singleInstance": false
+      },
+      {
+        "file": "est-survival.html",
+        "width": "1920",
+        "height": "1080",
+        "singleInstance": false
+      }
+    ],
+    "assetCategories": [
+      {
+        "name": "logo",
+        "title": "ロゴ",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "gif",
+          "png"
+        ]
+      }
     ]
   },
   "dependencies": {
@@ -39,6 +77,7 @@
     "@mui/material": "^7.0.2",
     "@nodecg/react-hooks": "^1.0.3",
     "got": "^14.4.7",
+    "livesplit-core": "^0.10.2",
     "lodash.clone": "^4.5.0",
     "neverthrow": "^8.2.0",
     "nodecg": "^2.5.3",
