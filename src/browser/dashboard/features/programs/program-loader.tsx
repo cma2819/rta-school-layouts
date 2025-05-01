@@ -12,7 +12,7 @@ type Props = {
   columns: string[];
 };
 
-export const ColumnSelector = ({ url, columns }: Props) => {
+export const ProgramLoader = ({ url, columns }: Props) => {
   const [selectedColumn, setSelectedColumn] = React.useState<number>(0);
   const [isLoading, setIsLoading] = React.useState(false);
 
