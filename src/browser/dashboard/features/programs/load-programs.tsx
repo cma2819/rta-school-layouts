@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Grid, TextField } from '@mui/material';
 import { ColumnLoader } from './column-loader';
-import { ColumnSelector } from './column-selector';
+import { ColumnSelector } from './program-loader';
 
 export const LoadPrograms = () => {
   const [url, setUrl] = React.useState<string>('');
@@ -32,7 +32,7 @@ export const LoadPrograms = () => {
         />
       </Grid>
       <Grid size={12}>
-        <ColumnSelector columns={columns} />
+        <ColumnSelector url={url} columns={columns} />
       </Grid>
     </Grid>
   );

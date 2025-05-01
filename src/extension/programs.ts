@@ -1,6 +1,13 @@
 import { ServerNodecgInstance } from '../nodecg/nodecg';
+import { Program } from '../nodecg/replicants';
 import { fetchScheduleByIdOrSlug } from './lib/horaro';
 import { err, ok } from 'neverthrow';
+
+const defaultProgram: Program = {
+  name: '',
+  estimate: '0:00:00',
+  estimateInSeconds: 0,
+};
 
 const horaroUrlToSlugs = (url: string) => {
   const match = url.match(/horaro\.org\/([^/]+)\/([^/]+)/);
@@ -60,6 +67,9 @@ const programs = (nodecg: ServerNodecgInstance) => {
   const logger = new nodecg.Logger('programs');
   const programsRep = nodecg.Replicant('programs', {
     defaultValue: [],
+  });
+  const currentProgram = nodecg.Replicant('current-program', {
+    defaultValue: defaultProgram,
   });
 
   nodecg.listenFor('programs:getColumns', async ({ url }, cb) => {

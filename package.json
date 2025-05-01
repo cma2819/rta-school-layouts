@@ -18,10 +18,17 @@
     "compatibleRange": "^1.9.0 || ^2.0.0",
     "dashboardPanels": [
       {
-        "name": "program-control",
-        "title": "プログラム操作",
+        "name": "admin-program",
+        "title": "プログラム管理",
         "width": 4,
-        "file": "program.html"
+        "file": "admin-program.html",
+        "workspace": "管理用"
+      },
+      {
+        "name": "control-program",
+        "title": "プログラム管理",
+        "width": 4,
+        "file": "control-program.html"
       }
     ]
   },
@@ -29,6 +36,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.0.2",
+    "@nodecg/react-hooks": "^1.0.3",
     "got": "^14.4.7",
     "lodash.clone": "^4.5.0",
     "neverthrow": "^8.2.0",

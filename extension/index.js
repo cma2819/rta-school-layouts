@@ -13,6 +13,11 @@ async function fetchScheduleByIdOrSlug(event, idOrSlug) {
   return got__default.default(url).json();
 }
 
+const defaultProgram = {
+  name: "",
+  estimate: "0:00:00",
+  estimateInSeconds: 0
+};
 const horaroUrlToSlugs = (url) => {
   const match = url.match(/horaro\.org\/([^/]+)\/([^/]+)/);
   if (!match) {
@@ -58,6 +63,9 @@ const programs = (nodecg) => {
   const logger = new nodecg.Logger("programs");
   const programsRep = nodecg.Replicant("programs", {
     defaultValue: []
+  });
+  nodecg.Replicant("current-program", {
+    defaultValue: defaultProgram
   });
   nodecg.listenFor("programs:getColumns", async ({ url }, cb) => {
     if (!cb || cb?.handled) {

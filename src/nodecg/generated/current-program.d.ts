@@ -6,8 +6,8 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface Configschema {
-	programs: {
-		horaro: string;
-	};
+export interface CurrentProgram {
+	name: string;
+	estimate: string;
+	estimateInSeconds: number;
 }

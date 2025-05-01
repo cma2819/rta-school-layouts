@@ -1,4 +1,5 @@
-import { Programs } from './generated/programs';
+import { CurrentProgram } from './generated/current-program';
+import { Programs, Program } from './generated/programs';
 
 type Asset = {
   base: string;
@@ -14,7 +15,8 @@ type Assets = Array<Asset>;
 
 type ReplicantMap = {
   programs: Programs;
+  'current-program': CurrentProgram;
   'assets:stands': Assets;
 };
 
-export { Asset, Assets, ReplicantMap };
+export { Program, Programs, CurrentProgram, Asset, Assets, ReplicantMap };
