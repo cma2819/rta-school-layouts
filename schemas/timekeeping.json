@@ -9,7 +9,8 @@
             "enum": [
                 "paused",
                 "in_progress",
-                "finished"
+                "finished",
+                "not_running"
             ]
         }
     },

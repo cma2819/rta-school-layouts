@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import { RunInfo } from '../features/speedruns/run-info';
 import '../styles.css';
 import { TimeLimit } from '../features/survivals/time-limit';
+import { ProgramInfo } from '../features/programs/program-info';
 
 const Container = styled.div`
   position: absolute;
@@ -16,7 +17,7 @@ const Container = styled.div`
 
 const InfoArea = styled.div`
   position: absolute;
-  bottom: 64px;
+  bottom: 48px;
   left: 264px;
   height: 128px;
   width: 1380px;
@@ -32,10 +33,17 @@ const VideoArea = styled.div`
 
 const TimeLimitArea = styled.div`
   position: absolute;
-  bottom: 256px;
+  bottom: 240px;
   right: 158px;
   width: 378px;
   height: 360px;
+`;
+
+const ProgramInfoArea = styled.div`
+  position: absolute;
+  top: 32px;
+  left: 16px;
+  width: 1680px;
 `;
 
 const App = () => {
@@ -43,6 +51,9 @@ const App = () => {
     <Container>
       <BackgroundBoard />
       <VideoArea />
+      <ProgramInfoArea>
+        <ProgramInfo />
+      </ProgramInfoArea>
       <InfoArea>
         <RunInfo />
       </InfoArea>

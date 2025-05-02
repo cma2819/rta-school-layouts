@@ -26,9 +26,15 @@
       },
       {
         "name": "control-program",
-        "title": "プログラム管理",
+        "title": "企画",
         "width": 4,
         "file": "control-program.html"
+      },
+      {
+        "name": "control-est-survival",
+        "title": "ESTサバイバル",
+        "width": 3,
+        "file": "control-est-survival.html"
       }
     ],
     "graphics": [

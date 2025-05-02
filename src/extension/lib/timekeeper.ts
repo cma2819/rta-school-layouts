@@ -1,7 +1,7 @@
 import { Run, Segment, Timer, TimeSpan } from 'livesplit-core';
-import { Time } from './Time';
+import { Time } from './time';
 
-export type TimeStatus = 'in_progress' | 'paused' | 'finished';
+export type TimeStatus = 'in_progress' | 'paused' | 'finished' | 'not_running';
 
 const TimerPhase = {
   notRunning: 0,
@@ -60,9 +60,12 @@ export class Timekeeper {
 
   resume(): void {
     const phase = this.livesplit.currentPhase();
+    if (phase === TimerPhase.ended) {
+      this.livesplit.undoSplit();
+    }
     this.livesplit.resume();
 
-    if (phase !== TimerPhase.paused) {
+    if (phase !== TimerPhase.paused && phase !== TimerPhase.ended) {
       throw new Error(
         "This would be nothing happened. You can resume timer only when it's paused.",
       );
@@ -70,6 +73,9 @@ export class Timekeeper {
   }
 
   finish(): Time {
+    if (this.livesplit.currentPhase() !== TimerPhase.running) {
+      this.livesplit.resume();
+    }
     this.livesplit.split();
 
     const time = this.currentTime;
@@ -94,6 +100,8 @@ export class Timekeeper {
         return 'paused';
       case TimerPhase.running:
         return 'in_progress';
+      case TimerPhase.notRunning:
+        return 'not_running';
       default:
         return 'finished';
     }

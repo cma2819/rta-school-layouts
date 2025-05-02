@@ -34,6 +34,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, key + "" , value);
 const TimerPhase = {
   notRunning: 0,
   running: 1,
+  ended: 2,
   paused: 3
 };
 class Timekeeper {
@@ -76,14 +77,20 @@ class Timekeeper {
   }
   resume() {
     const phase = this.livesplit.currentPhase();
+    if (phase === TimerPhase.ended) {
+      this.livesplit.undoSplit();
+    }
     this.livesplit.resume();
-    if (phase !== TimerPhase.paused) {
+    if (phase !== TimerPhase.paused && phase !== TimerPhase.ended) {
       throw new Error(
         "This would be nothing happened. You can resume timer only when it's paused."
       );
     }
   }
   finish() {
+    if (this.livesplit.currentPhase() !== TimerPhase.running) {
+      this.livesplit.resume();
+    }
     this.livesplit.split();
     const time = this.currentTime;
     return time;
@@ -103,6 +110,8 @@ class Timekeeper {
         return "paused";
       case TimerPhase.running:
         return "in_progress";
+      case TimerPhase.notRunning:
+        return "not_running";
       default:
         return "finished";
     }
@@ -220,6 +229,7 @@ const estSurvival = (nodecg) => {
     }
     try {
       timekeeper.reset();
+      penaltyRep.value = 0;
       cb(null);
     } catch (e) {
       if (cb && e instanceof Error) {
@@ -238,7 +248,7 @@ const estSurvival = (nodecg) => {
     if (!cb || cb.handled) {
       return;
     }
-    penaltyRep.value -= 1;
+    penaltyRep.value = Math.max(0, penaltyRep.value - 1);
     cb(null);
   });
 };

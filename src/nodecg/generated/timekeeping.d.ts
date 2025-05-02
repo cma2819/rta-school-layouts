@@ -8,7 +8,7 @@
 
 export interface Timekeeping {
 	time: Time;
-	status: 'paused' | 'in_progress' | 'finished';
+	status: 'paused' | 'in_progress' | 'finished' | 'not_running';
 }
 export interface Time {
 	display: string;

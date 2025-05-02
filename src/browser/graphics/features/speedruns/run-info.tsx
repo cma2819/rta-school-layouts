@@ -21,6 +21,15 @@ const DoneTimerText = styled(StrongText)`
   color: #cccc00;
 `;
 
+const GameText = styled(StrongText)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+`;
+
 export const RunInfo = () => {
   const [activeRun] = useReplicant<RunDataActiveRun>('runDataActiveRun', {
     bundle: 'nodecg-speedcontrol',
@@ -37,9 +46,18 @@ export const RunInfo = () => {
 
   return (
     <Container>
-      <StrongText style={{ gridRow: '1 / 2', gridColumn: '1 / 2' }}>
-        {activeRun?.game}
-      </StrongText>
+      <GameText
+        style={{
+          gridRow: '1 / 2',
+          gridColumn: '1 / 2',
+        }}
+      >
+        {activeRun?.game?.split(' ').map((word, index) => (
+          <span key={index} style={{ margin: '0 4px' }}>
+            {word}
+          </span>
+        ))}
+      </GameText>
       <Text style={{ gridRow: '2 / 3', gridColumn: '1 / 2' }}>
         {activeRun?.category} - {activeRun?.estimate}
       </Text>

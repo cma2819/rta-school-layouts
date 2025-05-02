@@ -8,7 +8,7 @@ const Container = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 8px 1fr 8px;
-  grid-template-rows: 8px 1fr 8px 16px;
+  grid-template-rows: 8px 1fr 8px;
 `;
 
 const Border = styled.div`
@@ -19,12 +19,6 @@ const Board = styled.div`
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   background-color: #004400;
-`;
-
-const BoardBase = styled.div`
-  background-color: #654321;
-  grid-row: 4 / 5;
-  grid-column: 1 / 4;
 `;
 
 const RightInfoGrid = styled.div`
@@ -44,7 +38,7 @@ const Duties = styled.div`
 
 const LogoArea = styled.div`
   position: absolute;
-  bottom: 32px;
+  bottom: 16px;
   left: 16px;
   width: 240px;
   height: 200px;
@@ -85,7 +79,6 @@ export const BackgroundBoard = () => {
       <Border style={{ gridColumn: '3 / 4', gridRow: '2 / 3' }} />
       <Border style={{ gridColumn: '1 / 4', gridRow: '3 / 4' }} />
       <Board />
-      <BoardBase />
       <RightInfoGrid>
         <div>五</div>
         <div>月</div>

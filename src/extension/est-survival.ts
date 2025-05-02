@@ -1,8 +1,8 @@
 import NodeCG from 'nodecg/types';
 import { ServerNodecgInstance } from '../nodecg/nodecg';
-import { Timekeeper } from './lib/Timekeeper';
+import { Timekeeper } from './lib/timekeeper';
 import { RunDataActiveRun } from '../nodecg/externals/speedcontrol';
-import { Time } from './lib/Time';
+import { Time } from './lib/time';
 
 const estSurvival = (nodecg: ServerNodecgInstance) => {
   const tickRateMs = 100;
@@ -130,6 +130,7 @@ const estSurvival = (nodecg: ServerNodecgInstance) => {
 
     try {
       timekeeper.reset();
+      penaltyRep.value = 0;
       cb(null);
     } catch (e) {
       if (cb && e instanceof Error) {
@@ -152,7 +153,7 @@ const estSurvival = (nodecg: ServerNodecgInstance) => {
       return;
     }
 
-    penaltyRep.value -= 1;
+    penaltyRep.value = Math.max(0, penaltyRep.value - 1);
     cb(null);
   });
 };

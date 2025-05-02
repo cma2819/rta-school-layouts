@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const InfoArea = styled.div`
   position: absolute;
-  bottom: 64px;
+  bottom: 48px;
   left: 264px;
   height: 128px;
   width: 1380px;
