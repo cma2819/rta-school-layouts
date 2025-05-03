@@ -6,4 +6,5 @@ import {
 declare global {
   const nodecg: BrowserNodecgInstance;
   const NodeCG: BrowserNodecgConstructor;
+  const obsstudio: unknown;
 }
