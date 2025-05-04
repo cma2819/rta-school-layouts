@@ -1,4 +1,4 @@
-import{u as o,j as t,r as p}from"./use-replicant-CqlUPs9_.js";import{B as x}from"./styles-Cx3QN8H6.js";import{n as i}from"./emotion-styled.browser.esm-Cr9bgKEx.js";import{T as e,G as r,R as a}from"./run-info-DEFP811N.js";import{P as d}from"./program-info-CisVuTjD.js";const l=i.div`
+import{u as o,j as t,r as p}from"./use-replicant-CqlUPs9_.js";import{B as x}from"./styles-BlBaqMdQ.js";import{n as i}from"./emotion-styled.browser.esm-Cr9bgKEx.js";import{T as e,G as r,R as a}from"./run-info-DEFP811N.js";import{P as d}from"./program-info-CisVuTjD.js";const l=i.div`
   width: 100%;
   height: 100%;
   display: grid;

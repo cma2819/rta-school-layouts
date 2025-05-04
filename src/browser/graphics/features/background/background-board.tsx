@@ -41,7 +41,7 @@ const LogoArea = styled.div`
   bottom: 16px;
   left: 16px;
   width: 240px;
-  height: 200px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,7 +86,7 @@ export const BackgroundBoard = () => {
         <div>{isDayTwo ? '五' : '四'}</div>
         <div>日</div>
         <div></div>
-        <div>(木)</div>
+        <div>({isDayTwo ? '月' : '日'})</div>
         <div></div>
         <div>日直</div>
         <Duties>

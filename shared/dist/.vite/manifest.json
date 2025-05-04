@@ -49,8 +49,8 @@
     "file": "styles-B3ZOFKj5.css",
     "src": "_styles-B3ZOFKj5.css"
   },
-  "_styles-Cx3QN8H6.js": {
-    "file": "styles-Cx3QN8H6.js",
+  "_styles-BlBaqMdQ.js": {
+    "file": "styles-BlBaqMdQ.js",
     "name": "styles",
     "imports": [
       "_use-replicant-CqlUPs9_.js",
@@ -102,37 +102,37 @@
     ]
   },
   "src/browser/graphics/pages/est-survival.tsx": {
-    "file": "est-survival-qbRa9DGs.js",
+    "file": "est-survival-DVujQ2nV.js",
     "name": "est-survival",
     "src": "src/browser/graphics/pages/est-survival.tsx",
     "isEntry": true,
     "imports": [
       "_use-replicant-CqlUPs9_.js",
-      "_styles-Cx3QN8H6.js",
+      "_styles-BlBaqMdQ.js",
       "_emotion-styled.browser.esm-Cr9bgKEx.js",
       "_run-info-DEFP811N.js",
       "_program-info-CisVuTjD.js"
     ]
   },
   "src/browser/graphics/pages/general.tsx": {
-    "file": "general-CUvTYZIQ.js",
+    "file": "general-C3MiuN8M.js",
     "name": "general",
     "src": "src/browser/graphics/pages/general.tsx",
     "isEntry": true,
     "imports": [
       "_use-replicant-CqlUPs9_.js",
-      "_styles-Cx3QN8H6.js",
+      "_styles-BlBaqMdQ.js",
       "_emotion-styled.browser.esm-Cr9bgKEx.js"
     ]
   },
   "src/browser/graphics/pages/generic-program.tsx": {
-    "file": "generic-program-CCKolYwy.js",
+    "file": "generic-program-C4FqNvcI.js",
     "name": "generic-program",
     "src": "src/browser/graphics/pages/generic-program.tsx",
     "isEntry": true,
     "imports": [
       "_use-replicant-CqlUPs9_.js",
-      "_styles-Cx3QN8H6.js",
+      "_styles-BlBaqMdQ.js",
       "_emotion-styled.browser.esm-Cr9bgKEx.js",
       "_program-info-CisVuTjD.js"
     ]
@@ -147,13 +147,13 @@
     ]
   },
   "src/browser/graphics/pages/speedrun.tsx": {
-    "file": "speedrun-Qvr4tYOv.js",
+    "file": "speedrun-Cp38MAm4.js",
     "name": "speedrun",
     "src": "src/browser/graphics/pages/speedrun.tsx",
     "isEntry": true,
     "imports": [
       "_use-replicant-CqlUPs9_.js",
-      "_styles-Cx3QN8H6.js",
+      "_styles-BlBaqMdQ.js",
       "_emotion-styled.browser.esm-Cr9bgKEx.js",
       "_run-info-DEFP811N.js"
     ]
