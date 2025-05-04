@@ -9,7 +9,7 @@ import{r as i,j as o}from"./use-replicant-CqlUPs9_.js";import{B as s}from"./styl
   bottom: 48px;
   left: 264px;
   height: 128px;
-  width: 1380px;
+  width: 1280px;
 `,n=t.div`
   position: absolute;
   top: 16px;

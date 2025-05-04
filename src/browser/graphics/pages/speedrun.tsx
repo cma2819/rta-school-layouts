@@ -18,7 +18,7 @@ const InfoArea = styled.div`
   bottom: 48px;
   left: 264px;
   height: 128px;
-  width: 1380px;
+  width: 1280px;
 `;
 
 const VideoArea = styled.div`
