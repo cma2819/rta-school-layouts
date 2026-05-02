@@ -4,7 +4,6 @@ import{R as c,u as p,a as l,j as e}from"./use-replicant-CqlUPs9_.js";import{n as
   display: grid;
   grid-template-columns: 8px 1fr 8px;
   grid-template-rows: 8px 1fr 8px;
-  color: #cccccc;
 `,i=t.div`
   background-color: #654321;
 `,u=t.div`
@@ -19,6 +18,7 @@ import{R as c,u as p,a as l,j as e}from"./use-replicant-CqlUPs9_.js";import{n as
   grid-template-rows: repeat(8, 64px);
   justify-items: center;
   font-size: 48px;
+  color: #cccccc;
 `,j=t.div`
   writing-mode: vertical-rl;
   margin-top: 36px;

@@ -49,8 +49,8 @@
     "file": "styles-B3ZOFKj5.css",
     "src": "_styles-B3ZOFKj5.css"
   },
-  "_styles-XFJnK2U6.js": {
-    "file": "styles-XFJnK2U6.js",
+  "_styles-w7ALv8Fr.js": {
+    "file": "styles-w7ALv8Fr.js",
     "name": "styles",
     "imports": [
       "_use-replicant-CqlUPs9_.js",
@@ -102,37 +102,37 @@
     ]
   },
   "src/browser/graphics/pages/est-survival.tsx": {
-    "file": "est-survival-B4QCxKm-.js",
+    "file": "est-survival-1d1JdzF7.js",
     "name": "est-survival",
     "src": "src/browser/graphics/pages/est-survival.tsx",
     "isEntry": true,
     "imports": [
       "_use-replicant-CqlUPs9_.js",
-      "_styles-XFJnK2U6.js",
+      "_styles-w7ALv8Fr.js",
       "_emotion-styled.browser.esm-Cr9bgKEx.js",
       "_run-info-CROKWwJn.js",
       "_program-info-CisVuTjD.js"
     ]
   },
   "src/browser/graphics/pages/general.tsx": {
-    "file": "general-MtS_CxQ1.js",
+    "file": "general-CbGGdV9z.js",
     "name": "general",
     "src": "src/browser/graphics/pages/general.tsx",
     "isEntry": true,
     "imports": [
       "_use-replicant-CqlUPs9_.js",
-      "_styles-XFJnK2U6.js",
+      "_styles-w7ALv8Fr.js",
       "_emotion-styled.browser.esm-Cr9bgKEx.js"
     ]
   },
   "src/browser/graphics/pages/generic-program.tsx": {
-    "file": "generic-program-BZ1LcbVO.js",
+    "file": "generic-program-dWH_H5JV.js",
     "name": "generic-program",
     "src": "src/browser/graphics/pages/generic-program.tsx",
     "isEntry": true,
     "imports": [
       "_use-replicant-CqlUPs9_.js",
-      "_styles-XFJnK2U6.js",
+      "_styles-w7ALv8Fr.js",
       "_emotion-styled.browser.esm-Cr9bgKEx.js",
       "_program-info-CisVuTjD.js"
     ]
@@ -147,13 +147,13 @@
     ]
   },
   "src/browser/graphics/pages/speedrun.tsx": {
-    "file": "speedrun-BqDK2sLZ.js",
+    "file": "speedrun-BRUr_rUP.js",
     "name": "speedrun",
     "src": "src/browser/graphics/pages/speedrun.tsx",
     "isEntry": true,
     "imports": [
       "_use-replicant-CqlUPs9_.js",
-      "_styles-XFJnK2U6.js",
+      "_styles-w7ALv8Fr.js",
       "_emotion-styled.browser.esm-Cr9bgKEx.js",
       "_run-info-CROKWwJn.js"
     ]
