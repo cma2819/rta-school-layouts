@@ -9,7 +9,6 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 8px 1fr 8px;
   grid-template-rows: 8px 1fr 8px;
-  color: #cccccc;
 `;
 
 const Border = styled.div`
@@ -30,6 +29,7 @@ const RightInfoGrid = styled.div`
   grid-template-rows: repeat(8, 64px);
   justify-items: center;
   font-size: 48px;
+  color: #cccccc;
 `;
 
 const Duties = styled.div`
