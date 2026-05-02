@@ -62,11 +62,27 @@ export const RunInfo = () => {
         {activeRun?.category} - {activeRun?.estimate}
       </Text>
       <StrongText style={{ gridRow: '1 / 2', gridColumn: '2 / 3' }}>
-        <Text style={{ display: 'inline-block', marginRight: '8px' }}>r=</Text>
+        <Text
+          style={{
+            display: 'inline-block',
+            marginRight: '8px',
+            color: '#cccccc',
+          }}
+        >
+          r=
+        </Text>
         {runnerNames?.join(' / ')}
       </StrongText>
       <TimerText style={{ gridRow: '2 / 3', gridColumn: ' 2 / 3' }}>
-        <Text style={{ display: 'inline-block', marginRight: '8px' }}>t=</Text>
+        <Text
+          style={{
+            display: 'inline-block',
+            marginRight: '8px',
+            color: '#cccccc',
+          }}
+        >
+          t=
+        </Text>
         {timer?.time}
       </TimerText>
     </Container>

@@ -9,6 +9,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 8px 1fr 8px;
   grid-template-rows: 8px 1fr 8px;
+  color: #cccccc;
 `;
 
 const Border = styled.div`
@@ -47,17 +48,36 @@ const LogoArea = styled.div`
   align-items: center;
 `;
 
-const startOfDayTwo = new Date(2025, 4, 5, 0, 0, 0);
+const startOfDayTwo = new Date(2026, 4, 5, 0, 0, 0);
+const startOfDayThree = new Date(2026, 4, 6, 0, 0, 0);
+
+const displayDates: Record<
+  1 | 2 | 3,
+  {
+    char: string;
+    dayOfWeek: string;
+  }
+> = {
+  1: { char: '四', dayOfWeek: '月' },
+  2: { char: '五', dayOfWeek: '火' },
+  3: { char: '六', dayOfWeek: '水' },
+};
 
 export const BackgroundBoard = () => {
-  const [isDayTwo, setIsDayTwo] = React.useState(false);
+  const [currentDay, setCurrentDay] = React.useState<1 | 2 | 3>(1);
   const [logos] = useReplicant<Assets>('assets:logo');
   const [logoPath, setLogoPath] = React.useState<string | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
-      setIsDayTwo(startOfDayTwo.getTime() <= now.getTime());
+      if (now.getTime() >= startOfDayThree.getTime()) {
+        setCurrentDay(3);
+      } else if (now.getTime() >= startOfDayTwo.getTime()) {
+        setCurrentDay(2);
+      } else {
+        setCurrentDay(1);
+      }
     }, 1000);
 
     return () => {
@@ -83,16 +103,14 @@ export const BackgroundBoard = () => {
         <div>五</div>
         <div>月</div>
         <div></div>
-        <div>{isDayTwo ? '五' : '四'}</div>
+        <div>{displayDates[currentDay].char}</div>
         <div>日</div>
         <div></div>
-        <div>({isDayTwo ? '月' : '日'})</div>
+        <div>({displayDates[currentDay].dayOfWeek})</div>
         <div></div>
         <div>日直</div>
         <Duties>
-          とよ
           <br />
-          おふじ
         </Duties>
       </RightInfoGrid>
       <LogoArea>
